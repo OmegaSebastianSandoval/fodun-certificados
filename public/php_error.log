@@ -1,0 +1,30 @@
+[09-Dec-2024 16:51:01 America/Bogota] PHP Warning:  Undefined array key 2 in C:\Apache24\certificados\framework\Http\Routes.php on line 26
+[09-Dec-2024 16:51:01 America/Bogota] PHP Warning:  Undefined array key 3 in C:\Apache24\certificados\framework\Http\Routes.php on line 31
+[09-Dec-2024 16:51:01 America/Bogota] PHP Deprecated:  addslashes(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Apache24\certificados\framework\Controllers\Abstract.php on line 45
+[09-Dec-2024 16:51:01 America/Bogota] PHP Deprecated:  addslashes(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Apache24\certificados\framework\Controllers\Abstract.php on line 45
+[09-Dec-2024 16:51:01 America/Bogota] PHP Deprecated:  Optional parameter $filters declared before required parameter $amount is implicitly treated as a required parameter in C:\Apache24\certificados\framework\Db\Table.php on line 54
+[09-Dec-2024 16:51:01 America/Bogota] PHP Deprecated:  Optional parameter $order declared before required parameter $amount is implicitly treated as a required parameter in C:\Apache24\certificados\framework\Db\Table.php on line 54
+[09-Dec-2024 16:51:01 America/Bogota] PHP Warning:  Undefined array key "user" in C:\Apache24\certificados\framework\Session.php on line 20
+[09-Dec-2024 16:51:01 America/Bogota] PHP Warning:  Attempt to read property "asociado_nombre" on null in C:\Apache24\certificados\app\modules\page\Views\partials\header.php on line 14
+[09-Dec-2024 16:51:01 America/Bogota] PHP Warning:  Undefined array key "kt_login_id" in C:\Apache24\certificados\framework\Session.php on line 20
+[09-Dec-2024 16:51:01 America/Bogota] PHP Warning:  Attempt to read property "user_id" on bool in C:\Apache24\certificados\app\modules\page\Controllers\mainController.php on line 43
+[09-Dec-2024 16:51:01 America/Bogota] PHP Warning:  Undefined array key "user" in C:\Apache24\certificados\framework\Session.php on line 20
+[09-Dec-2024 16:51:01 America/Bogota] PHP Warning:  Undefined array key "pass" in C:\Apache24\certificados\framework\View.php(45) : eval()'d code on line 29
+[09-Dec-2024 16:51:35 America/Bogota] PHP Warning:  Undefined array key 2 in C:\Apache24\certificados\framework\Http\Routes.php on line 26
+[09-Dec-2024 16:51:35 America/Bogota] PHP Warning:  Undefined array key 3 in C:\Apache24\certificados\framework\Http\Routes.php on line 31
+[09-Dec-2024 16:51:35 America/Bogota] PHP Deprecated:  addslashes(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Apache24\certificados\framework\Controllers\Abstract.php on line 45
+[09-Dec-2024 16:51:35 America/Bogota] PHP Deprecated:  addslashes(): Passing null to parameter #1 ($string) of type string is deprecated in C:\Apache24\certificados\framework\Controllers\Abstract.php on line 45
+[09-Dec-2024 16:51:35 America/Bogota] PHP Deprecated:  Optional parameter $filters declared before required parameter $amount is implicitly treated as a required parameter in C:\Apache24\certificados\framework\Db\Table.php on line 54
+[09-Dec-2024 16:51:35 America/Bogota] PHP Deprecated:  Optional parameter $order declared before required parameter $amount is implicitly treated as a required parameter in C:\Apache24\certificados\framework\Db\Table.php on line 54
+[09-Dec-2024 16:51:35 America/Bogota] PHP Warning:  Undefined array key "user" in C:\Apache24\certificados\framework\Session.php on line 20
+[09-Dec-2024 16:51:35 America/Bogota] PHP Warning:  Attempt to read property "asociado_nombre" on null in C:\Apache24\certificados\app\modules\page\Views\partials\header.php on line 14
+[09-Dec-2024 16:51:35 America/Bogota] PHP Warning:  Undefined array key "kt_login_id" in C:\Apache24\certificados\framework\Session.php on line 20
+[09-Dec-2024 16:51:35 America/Bogota] PHP Warning:  Attempt to read property "user_id" on bool in C:\Apache24\certificados\app\modules\page\Controllers\mainController.php on line 43
+[09-Dec-2024 16:51:35 America/Bogota] PHP Warning:  Undefined array key "user" in C:\Apache24\certificados\framework\Session.php on line 20
+[09-Dec-2024 16:51:35 America/Bogota] PHP Warning:  Undefined array key "pass" in C:\Apache24\certificados\framework\View.php(45) : eval()'d code on line 29
+[17-Dec-2024 14:32:11 America/Bogota] PHP Warning:  Undefined array key "HTTP_HOST" in C:\Apache24\certificados\app\bootstrap.php on line 53
+[17-Dec-2024 14:32:11 America/Bogota] PHP Warning:  Undefined array key "HTTP_HOST" in C:\Apache24\certificados\app\bootstrap.php on line 55
+[19-Dec-2024 11:30:03 America/Bogota] PHP Warning:  Undefined array key "HTTP_HOST" in C:\Apache24\certificados\app\bootstrap.php on line 53
+[19-Dec-2024 11:30:03 America/Bogota] PHP Warning:  Undefined array key "HTTP_HOST" in C:\Apache24\certificados\app\bootstrap.php on line 55
+[31-Dec-2024 12:05:38 America/Bogota] PHP Warning:  Undefined array key "HTTP_HOST" in C:\Apache24\certificados\app\bootstrap.php on line 53
+[31-Dec-2024 12:05:38 America/Bogota] PHP Warning:  Undefined array key "HTTP_HOST" in C:\Apache24\certificados\app\bootstrap.php on line 55

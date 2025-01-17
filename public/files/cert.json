@@ -1,0 +1,102 @@
+{
+  "1": {
+    "title": "Cuenta de Ahorros CoopCentral",
+    "image": "cert-1.jpg",
+    "required-data": ["basic", "date", "saving-account"],
+    "optionsBool": true,
+    "optionsBtn": "Seleccionar cuenta",
+    "optionsType": "API",
+    "optionApi": "saving-accounts",
+    "isRetired": false,
+    "isPeace": false
+  },
+  "2": {
+    "title": "Vinculación Fodun",
+    "image": "cert-2.jpg",
+    "required-data": ["basic", "date"],
+    "isRetired": false,
+    "isPeace": false
+  },
+  "3": {
+    "title": "Saldo de productos",
+    "image": "cert-3.jpg",
+    "required-data": ["basic", "date", "saving-accounts", "credit-accounts"],
+    "optionsBool": true,
+    "optionsBtn": "Generar",
+    "optionsType": "Addressee",
+    "isRetired": false,
+    "isPeace": false
+  },
+  "4": {
+    "title": "Saldo de créditos",
+    "image": "cert-4.jpg",
+    "required-data": ["basic", "date", "credit-accounts"],
+    "optionsBool": true,
+    "optionsBtn": "Generar",
+    "optionsType": "Addressee",
+    "isRetired": false,
+    "isPeace": false
+  },
+  "5": {
+    "title": "Saldo de ahorros",
+    "image": "cert-5.jpg",
+    "required-data": ["basic", "date", "saving-accounts"],
+    "optionsBool": true,
+    "optionsBtn": "Generar",
+    "optionsType": "Addressee",
+    "isRetired": false,
+    "isPeace": false
+  },
+  "6": {
+    "title": "Saldo de crédito individual",
+    "image": "cert-6.jpg",
+    "required-data": ["basic", "date", "credit-account"],
+    "optionsBool": true,
+    "optionsBtn": "Seleccionar cuenta",
+    "optionsType": "API",
+    "optionApi": "credit-accounts",
+    "isRetired": false,
+    "isPeace": false
+  },
+  "7": {
+    "title": "Retiro Fodun",
+    "image": "cert-7.jpg",
+    "required-data": ["basic", "date"],
+    "optionsBool": true,
+    "optionsBtn": "Generar",
+    "optionsType": "Addressee",
+    "isRetired": true,
+    "isPeace": false
+  },
+  "8": {
+    "title": "Cancelación de crédito",
+    "image": "cert-8.jpg",
+    "required-data": ["basic", "date", "canceled-credit-account"],
+    "optionsBool": true,
+    "optionsBtn": "Seleccionar cuenta",
+    "optionsType": "API",
+    "optionApi": "canceled-credit-accounts",
+    "isRetired": false,
+    "isPeace": false
+  },
+  "9": {
+    "title": "Paz y salvo",
+    "image": "cert-9.jpg",
+    "required-data": ["basic", "date"],
+    "optionsBool": true,
+    "optionsBtn": "Generar",
+    "optionsType": "Addressee",
+    "isRetired": false,
+    "isPeace": true
+  },
+  "10": {
+    "title": "Paz y salvo total obligaciones",
+    "image": "cert-10.jpg",
+    "required-data": ["basic", "date"],
+    "optionsBool": true,
+    "optionsBtn": "Generar",
+    "optionsType": "Addressee",
+    "isRetired": false,
+    "isPeace": true
+  }
+}
