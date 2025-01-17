@@ -51,7 +51,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                <form action="/page/index/generar" method="post" class="row">
+                                <form action="/page/index/generar" method="post" class="row" target="_blank">
                                   <input type="hidden" value="<?php echo $key ?>" name="id">
                                   <?php if ($tipo['optionsType'] == 'API') { ?>
                                     <div class="col-12">
@@ -79,7 +79,7 @@
                           </div>
                         </div>
                       <?php } else { ?>
-                        <a href="/page/index/generar?id=<?php echo $key ?>" class="btn-generar">
+                        <a href="/page/index/generar?id=<?php echo $key ?>" class="btn-generar" target="_blank">
                           Generar
                         </a>
                       <?php } ?>

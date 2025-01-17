@@ -228,7 +228,7 @@ class Page_indexController extends Page_mainController
       exit;
     }
     $this->_view->data = $data;
-    $mpdf = new \Mpdf\Mpdf(['default_font' => 'Arial', 'tempDir' => ROOT . '..\vendor\mpdf\mpdf\tmp\mpdf']);
+    $mpdf = new \Mpdf\Mpdf(['default_font' => 'Arial', 'tempDir' => ROOT . '..\vendor\mpdf\mpdf\tmp']);
     $content = $this->_view->getRoutPHP('modules/page/Views/index/certificado-' . $id . '.php');
     $mpdf->title = 'Certificado ' . $title;
     // Cuales son los margenes de la hoja?: array(left, top, right, bottom)
