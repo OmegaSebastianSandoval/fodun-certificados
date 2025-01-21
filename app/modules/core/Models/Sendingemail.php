@@ -105,6 +105,25 @@ class Core_Model_Sendingemail
     } else {
       return 2;
     }
-    
+  }
+
+  public function enviarOTP($email, $nombreCompleto, $code)
+  {
+    $this->_view->email = $email;
+    $this->_view->nombreCompleto = $nombreCompleto;
+    $this->_view->code = $code;
+    // $this->email->getMail()->addAddress($email, $nombreCompleto);
+    $this->email->getMail()->addBCC("desarrollo8@omegawebsystems.com", "Inicio de sesión FODUN - Certificados");
+
+
+    $content = $this->_view->getRoutPHP('/../app/modules/core/Views/templatesemail/enviarOTP.php');
+    $this->email->getMail()->Subject = 'Ingreso FODUN - Certificados';
+    $this->email->getMail()->msgHTML($content);
+    $this->email->getMail()->AltBody = $content;
+    if ($this->email->sed() == true) {
+      return 1;
+    } else {
+      return 2;
+    }
   }
 }

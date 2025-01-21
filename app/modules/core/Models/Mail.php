@@ -20,16 +20,27 @@ class Core_Model_Mail
     $informacionModel = new Page_Model_DbTable_Informacion();
     $informacion = $informacionModel->getList("", "orden ASC")[0];
 
-    $this->mail = new PHPMailer;
+    /* $this->mail = new PHPMailer;
     $this->mail->CharSet = 'UTF-8';
     $this->mail->isSMTP();
-    $this->mail->SMTPDebug = 0;
+    $this->mail->SMTPDebug = 1;
     // $this->mail->SMTPSecure = 'ssl';
     $this->mail->Host = $informacion->info_pagina_host;
     $this->mail->Port = $informacion->info_pagina_port;
     $this->mail->SMTPAuth = true;
     $this->mail->Username = $informacion->info_pagina_username;
     $this->mail->Password = $informacion->info_pagina_password;
+    $this->mail->setFrom($informacion->info_pagina_correo_remitente, $informacion->info_pagina_nombre_remitente); */
+    $this->mail = new PHPMailer;
+    $this->mail->CharSet = 'UTF-8';
+    $this->mail->isSMTP();
+    $this->mail->SMTPDebug = 0;
+    $this->mail->SMTPSecure = 'ssl';
+    $this->mail->Host = "mail.omegasolucionesweb.com";
+    $this->mail->Port = 465;
+    $this->mail->SMTPAuth = true;
+    $this->mail->Username = "pruebas@omegasolucionesweb.com";
+    $this->mail->Password = "Admin.2008";
     $this->mail->setFrom($informacion->info_pagina_correo_remitente, $informacion->info_pagina_nombre_remitente);
   }
   /**

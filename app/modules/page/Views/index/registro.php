@@ -1,7 +1,7 @@
 <div class="bx-general bx-login">
   <div class="row mx-0">
     <div class="col-md-6 login-bg">
-      <img src="/skins/page/images/login-bg.png" alt="">
+      <img src="/skins/page/images/login-bg.webp" alt="">
     </div>
     <div class="col-md-6">
       <div class="row w-100 text-center justify-content-center">
@@ -30,7 +30,7 @@
                       <div class="col-md-12 no-padding text-start">
                         <label for="cedula">Documento</label>
                         <div class="input-container">
-                          <input type="text" class="form-control" id="user" name="user" placeholder="Usuario" required="">
+                          <input type="text" class="form-control" id="user" name="user" placeholder="Usuario" required>
                         </div>
                       </div>
                     </div>
@@ -85,8 +85,6 @@
   .is-invalid+.invalid-feedback {
     display: block;
   }
-
-
 </style>
 
 <script>

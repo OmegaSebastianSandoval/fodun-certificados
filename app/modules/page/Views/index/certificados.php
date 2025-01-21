@@ -1,3 +1,13 @@
+<style>
+  body {
+
+    overflow-y: scroll;
+  }
+
+  .contenedor-general {
+    height: auto;
+  }
+</style>
 <div class="certificados-bx">
   <div class="container">
     <div class="row">
@@ -94,11 +104,11 @@
     </div>
   </div>
 </div>
-<?php
+<!-- <?php
 echo '<pre>';
 print_r($this->apiData['credit-accounts-to-peace']);
 echo '</pre>';
-?>
+?> -->
 <?php if ($_GET['error'] == 'true') { ?>
   <script>
     Swal.fire({

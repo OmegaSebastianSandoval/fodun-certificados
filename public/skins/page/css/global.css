@@ -16,28 +16,43 @@
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+html, body {
+  height: 100vh;
+  overflow: hidden;
 }
 
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
 img {
   max-width: 100%;
+}
+.contenedor-general{
+  height: calc(100vh - 120px);
 }
 
 footer {
   overflow: hidden;
-}
-
-.footer-info {
+  padding: 20px 0;
   background: var(--red);
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
   font-size: 15px;
   font-weight: 300;
+  height: 60px;
 }
+footer p{
+  margin: 0;
+}
+
+
 
 .footer-images {
   padding-top: 8px;
@@ -55,12 +70,12 @@ footer {
 }
 
 .bx-general {
-  
+  height: 100%;
 }
-.bx-general > .row {
+ .bx-general > .row {
   overflow: hidden;
-  min-height: calc(100vh - 103px);
-}
+  min-height: 100%;
+} 
 
 .login-bg {
   position: relative;
@@ -79,11 +94,10 @@ footer {
 }
 
 .logo {
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
   display: block;
   margin: 0 auto;
-  margin-top: 70px;
-  margin-bottom: 50px;
 }
 
 h3.login-title {
@@ -136,7 +150,7 @@ p.login-par {
 }
 
 .bx-login form {
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 
 .bx-login form a {
@@ -167,6 +181,7 @@ p.login-par {
 
 header {
   width: 100%;
+  height: 60px;
 }
 
 header .header {
@@ -327,4 +342,40 @@ header .header .logo {
 
 .alert-contrasenia {
   display: none;
+}
+
+/*  */
+
+.otp-input {
+  width: 2em;
+  padding: 0.5em;
+  margin: 0.2em;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid var(--red-dark);
+  color: #737373;
+  font-weight: 800;
+
+}
+
+.otp-input:focus-visible {
+  outline: none;
+  border: 1px solid var(--red);
+
+}
+
+.otp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-login .btn-blue {
+  transition: all 300ms ease;
+}
+
+.container-login .btn-blue:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: var(--red);
 }

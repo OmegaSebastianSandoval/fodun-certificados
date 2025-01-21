@@ -1,7 +1,7 @@
 <div class="bx-general bx-login">
   <div class="row mx-0">
     <div class="col-md-6 login-bg">
-      <img src="/skins/page/images/login-bg.png" alt="">
+      <img src="/skins/page/images/login-bg.webp" alt="">
     </div>
     <div class="col-md-6">
       <div class="row w-100 text-center justify-content-center">
@@ -49,16 +49,15 @@
 </style>
 
 <script>
-  $(document).ready(function()
-  {
-    $('#forgotForm').on('submit', function(e){
+  $(document).ready(function() {
+    $('#forgotForm').on('submit', function(e) {
       e.preventDefault();
       $.ajax({
         url: $(this).attr('action'),
         type: 'post',
         dataType: 'json',
         data: $(this).serialize(),
-        success: function(data){
+        success: function(data) {
           Swal.fire({
             icon: 'success',
             text: 'Si el documento ingresado se encuentra registrado se enviara un enlace de recuperación al correo asociado'

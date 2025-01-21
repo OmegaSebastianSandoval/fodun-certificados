@@ -1,7 +1,7 @@
 <div class="bx-general bx-login">
   <div class="row mx-0">
     <div class="col-md-6 login-bg">
-      <img src="/skins/page/images/login-bg.png" alt="">
+      <img src="/skins/page/images/login-bg.webp" alt="">
     </div>
     <div class="col-md-6">
       <div class="row w-100 text-center justify-content-center">
@@ -24,8 +24,8 @@
 
             <div class="col-xxl-6 col-md-7 col-9 mx-auto">
               <form action="/page/index/changePassword" method="post" class="row" id="change" autocomplete="off">
-              <input type="hidden" name="token" value="<?php echo $_GET['t'] ?>">
-              <input type="hidden" name="document" value="<?php echo $_GET['d'] ?>">
+                <input type="hidden" name="token" value="<?php echo $_GET['t'] ?>">
+                <input type="hidden" name="document" value="<?php echo $_GET['d'] ?>">
                 <input type="hidden" value="<?php echo $this->user->id ?>" name="user_id">
                 <div class="col-md-12 no-padding text-start">
                   <label for="password">Contraseña</label>
@@ -42,32 +42,32 @@
                   <div class="invalid-feedback" id="secondPasswordFeedback"></div>
                 </div>
                 <a href="/" class="mb-4 mt-2">¿Ya tienes cuenta? Inicia sesión.</a>
-                <?php 
-              switch ($_GET['error']) {
-                case '1':
-                  ?>
+                <?php
+                switch ($_GET['error']) {
+                  case '1':
+                ?>
                     <div class="alert alert-danger" role="alert">
                       No se ha encontrado un asociado registrado con ese documento, por favor realice el proceso nuevamente.
-                    </div>                  
+                    </div>
                   <?php
-                  break;
-                case '2':
+                    break;
+                  case '2':
                   ?>
                     <div class="alert alert-danger" role="alert">
                       El token no est valido o ha caducado, por favor realice el proceso nuevamente.
-                    </div>                  
+                    </div>
                   <?php
-                  break;
-                case '3':
+                    break;
+                  case '3':
                   ?>
                     <div class="alert alert-danger" role="alert">
                       Las contraseñas deben ser iguales.
-                    </div>                  
-                  <?php
-                  break;
-              }
-              
-              ?>
+                    </div>
+                <?php
+                    break;
+                }
+
+                ?>
                 <button type="submit">Cambiar</button>
               </form>
             </div>

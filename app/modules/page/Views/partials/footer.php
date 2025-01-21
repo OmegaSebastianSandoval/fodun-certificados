@@ -1,11 +1,9 @@
 <div class="footer-info flex-column">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, sequi.  <br>
-    <a href="https://eldorado.aero/contacto/" style="color: #FFF; font-weight: 700;">
-      Contáctanos:
+  <p>Todos los derechos reservados.  <br>
+  Desarrollado por 
+    <a href="https://omegasolucionesweb.com" style="color: #FFF; font-weight: 700;">
+      Omega Soluciones Web
     </a>
-    <br>
-    Lorem ipsum dolor sit amet.
-    <br>
   </p>
 </div>
 <!-- <div class="footer-images d-flex justify-content-center align-items-center">
@@ -59,7 +57,7 @@
   }
 
   .loader::before {
-    background-color: #1c3455;
+    background-color: #af1c30;
     transform: scale(0.5) translate(-48px, -48px);
   }
 

@@ -1,7 +1,7 @@
 {
   "1": {
     "title": "Cuenta de Ahorros CoopCentral",
-    "image": "cert-1.jpg",
+    "image": "cert-1.webp",
     "required-data": ["basic", "date", "saving-account"],
     "optionsBool": true,
     "optionsBtn": "Seleccionar cuenta",
@@ -12,14 +12,14 @@
   },
   "2": {
     "title": "Vinculación Fodun",
-    "image": "cert-2.jpg",
+    "image": "cert-2.webp",
     "required-data": ["basic", "date"],
     "isRetired": false,
     "isPeace": false
   },
   "3": {
     "title": "Saldo de productos",
-    "image": "cert-3.jpg",
+    "image": "cert-3.webp",
     "required-data": ["basic", "date", "saving-accounts", "credit-accounts"],
     "optionsBool": true,
     "optionsBtn": "Generar",
@@ -29,7 +29,7 @@
   },
   "4": {
     "title": "Saldo de créditos",
-    "image": "cert-4.jpg",
+    "image": "cert-4.webp",
     "required-data": ["basic", "date", "credit-accounts"],
     "optionsBool": true,
     "optionsBtn": "Generar",
@@ -39,7 +39,7 @@
   },
   "5": {
     "title": "Saldo de ahorros",
-    "image": "cert-5.jpg",
+    "image": "cert-5.webp",
     "required-data": ["basic", "date", "saving-accounts"],
     "optionsBool": true,
     "optionsBtn": "Generar",
@@ -49,7 +49,7 @@
   },
   "6": {
     "title": "Saldo de crédito individual",
-    "image": "cert-6.jpg",
+    "image": "cert-6.webp",
     "required-data": ["basic", "date", "credit-account"],
     "optionsBool": true,
     "optionsBtn": "Seleccionar cuenta",
@@ -60,7 +60,7 @@
   },
   "7": {
     "title": "Retiro Fodun",
-    "image": "cert-7.jpg",
+    "image": "cert-7.webp",
     "required-data": ["basic", "date"],
     "optionsBool": true,
     "optionsBtn": "Generar",
@@ -70,7 +70,7 @@
   },
   "8": {
     "title": "Cancelación de crédito",
-    "image": "cert-8.jpg",
+    "image": "cert-8.webp",
     "required-data": ["basic", "date", "canceled-credit-account"],
     "optionsBool": true,
     "optionsBtn": "Seleccionar cuenta",
@@ -81,7 +81,7 @@
   },
   "9": {
     "title": "Paz y salvo",
-    "image": "cert-9.jpg",
+    "image": "cert-9.webp",
     "required-data": ["basic", "date"],
     "optionsBool": true,
     "optionsBtn": "Generar",
@@ -91,7 +91,7 @@
   },
   "10": {
     "title": "Paz y salvo total obligaciones",
-    "image": "cert-10.jpg",
+    "image": "cert-10.webp",
     "required-data": ["basic", "date"],
     "optionsBool": true,
     "optionsBtn": "Generar",

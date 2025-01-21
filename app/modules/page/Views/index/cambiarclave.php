@@ -1,7 +1,7 @@
 <div class="bx-general bx-login">
   <div class="row mx-0">
     <div class="col-md-6 login-bg pt-5">
-      <img src="/skins/page/images/login-bg.png" alt="">
+      <img src="/skins/page/images/login-bg.webp" alt="">
     </div>
     <div class="col-md-6">
       <div class="row w-100 text-center justify-content-center">
@@ -41,7 +41,7 @@
   </div>
 </div>
 <style>
-  header{
+  header {
     display: none;
   }
 </style>

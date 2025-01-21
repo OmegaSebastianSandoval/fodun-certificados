@@ -19,7 +19,7 @@ class Page_Model_Data
   public function returnData($nit, $optionSelected = null)
   {
     $data = array();
-    $userNit = Session::getInstance()->get('user')->asociado_nit;
+    $userNit = Session::getInstance()->get('user')->Cedula;
     $json = $this->certJson;
     $json = $json[$nit];
     // echo '<pre>';

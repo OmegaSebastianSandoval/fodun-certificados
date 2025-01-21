@@ -1,6 +1,16 @@
 $(document).ready(function () {
   $("#btn-found-user").on("click", function () {
-    var user = $("#user").val();
+    const user = $("#user").val();
+    if (!user) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Debe ingresar un documento",
+        confirmButtonColor: "#af1c30",
+        confirmButtonText: "Aceptar",
+      });
+      return;
+    }
     $.ajax({
       url: "/page/index/foundUser",
       method: "post",
@@ -24,6 +34,8 @@ $(document).ready(function () {
             icon: "error",
             title: "Oops...",
             text: "El usuario no existe",
+            confirmButtonColor: "#af1c30",
+            confirmButtonText: "Aceptar",
           });
         }
       },
@@ -31,6 +43,17 @@ $(document).ready(function () {
   });
   $("#loginForm").on("submit", function (e) {
     e.preventDefault();
+    const response = grecaptcha.getResponse();
+    if (response.length === 0) {
+      Swal.fire({
+        icon: "warning",
+        text: "Por favor, verifica que no eres un robot.",
+        confirmButtonColor: "#af1c30",
+        confirmButtonText: "Continuar",
+      });
+      return;
+    }
+
     let data = $(this).serialize();
     $.ajax({
       url: $(this).attr("action"),
@@ -38,18 +61,54 @@ $(document).ready(function () {
       data: data,
       dataType: "json",
       success: function (response) {
+        console.log(response);
         if (response.status == "success") {
           Swal.fire({
             icon: "success",
-            text: 'Bienvenido ' + response.name,
+            text: "Bienvenido " + response.name,
+            confirmButtonColor: "#af1c30",
+            confirmButtonText: "Continuar",
           }).then((result) => {
-            window.location.href = "/";
+            window.location.href = "/page/login/otp?e=" + response.email;
           });
-        } else if (response.status == "error") {
+        } else {
           Swal.fire({
-            icon: "error",
+            icon: response.status,
             text: response.message,
+            confirmButtonColor: "#af1c30",
+            confirmButtonText: "Aceptar",
+          }).then((result) => {
+            if (response.message == "Captcha incorrecto") {
+              window.location.reload();
+            }
           });
+        }
+      },
+    });
+  });
+  // Login Paso2:
+  $("#otpForm").on("submit", function (e) {
+    e.preventDefault();
+    let data = $(this).serialize();
+    $.ajax({
+      url: $(this).attr("action"),
+      type: $(this).attr("method"),
+      data: data,
+      dataType: "json",
+      success: function (response) {
+        switch (response.status) {
+          case "success":
+            window.location.href = "/";
+            break;
+          case "error":
+            Swal.fire({
+              icon: "error",
+              title: "Error",
+              text: response.message,
+              confirmButtonColor: "#af1c30",
+              confirmButtonText: "Continuar",
+            });
+            break;
         }
       },
     });
@@ -74,6 +133,7 @@ $(document).ready(function () {
           Swal.fire({
             icon: "error",
             text: response.message,
+            confirmButtonColor: "#af1c30",
           });
         }
       },

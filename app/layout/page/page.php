@@ -12,8 +12,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/components/bootstrap/css/bootstrap.min.css">
   <!-- Slick CSS -->
-  <link rel="stylesheet" href="/components/slick/slick.css">
-  <link rel="stylesheet" href="/components/slick/slick-theme.css">
+<!--   <link rel="stylesheet" href="/components/slick/slick.css">
+  <link rel="stylesheet" href="/components/slick/slick-theme.css"> -->
   <!-- Global CSS -->
   <link rel="stylesheet" href="/skins/page/css/global.css?v=2">
   <link rel="stylesheet" href="/skins/page/css/responsive.css?v=2">
@@ -35,10 +35,10 @@
   <!-- Carousel -->
   <script type="text/javascript" src="/scripts/carousel/carousel.js"></script>
   <!-- Slick -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ <!--  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-  <script src="/components/fullpage/slick/slick.min.js"></script>
+  <script src="/components/fullpage/slick/slick.min.js"></script> -->
 
   <script src="/components/jquery-knob/js/jquery.knob.js"></script>
 

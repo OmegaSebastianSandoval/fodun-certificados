@@ -11,11 +11,11 @@
           </strong>
         </div>
         <div class="col-12">
-          <?php echo Session::getInstance()->get('user')->asociado_nombre; ?>
+          <?php echo Session::getInstance()->get('user')->NombreCompleto; ?>
         </div>
       </div>
       <div class="row mx-0 logout">
-        <a href="/page/index/logout">
+        <a href="/page/login/logout">
           Salir 
           <i class="fa-solid fa-arrow-right-from-bracket"></i>
         </a>
