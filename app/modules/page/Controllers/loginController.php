@@ -18,6 +18,7 @@ class Page_loginController extends Page_mainController
   }
   public function indexAction()
   {
+    set_time_limit(0);
     $this->setLayout('blanco');
     $nit = $this->_getSanitizedParam('nit');
     $captcha = $this->_getSanitizedParam('g-recaptcha-response');

@@ -4,8 +4,8 @@
       <img src="/skins/page/images/login-bg.webp?v=1.0" alt="">
     </div>
     <div class="col-md-6">
-      <div class="row w-100 text-center justify-content-center h-100">
-        <div class="col-lg-9 col-md-10 col-11 d-flex justify-content-center align-items-center">
+      <div class="row w-100 text-center justify-content-center h-100 mx-auto">
+        <div class="col-lg-9 col-md-10 col-12 d-flex justify-content-center align-items-center">
           <div class="row">
             <div class="col-12">
               <img src="/skins/page/images/logo.jpg" alt="" class="logo">
@@ -88,7 +88,7 @@
   }
 
   .contenedor-general {
-    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
   }
 
   /* footer{

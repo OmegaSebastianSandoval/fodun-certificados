@@ -19,20 +19,20 @@
   position: relative;
 }
 html, body {
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 img {
   max-width: 100%;
 }
 .contenedor-general{
-  height: calc(100vh - 120px);
+  height: calc(100dvh - 120px);
 }
 
 footer {
