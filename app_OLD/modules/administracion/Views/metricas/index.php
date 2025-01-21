@@ -1,1 +1,0 @@
-<?php echo $this->info->info_pagina_metricas; ?>
