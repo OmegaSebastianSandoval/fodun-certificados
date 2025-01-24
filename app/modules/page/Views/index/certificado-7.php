@@ -61,7 +61,7 @@
     <td class="">
       <p>
         <br>
-        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> de
+        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
         <?php echo $this->data['date-year'] ?>, con una validez de 30 días.
       </p>
     </td>

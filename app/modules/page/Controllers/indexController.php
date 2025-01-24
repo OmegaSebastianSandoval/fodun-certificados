@@ -50,6 +50,7 @@ class Page_indexController extends Page_mainController
     $apiData['basic'] = $apiModel->getAsociado($userNit)[0];
     $apiData['saving-accounts'] = $apiModel->getSavingAccountsOptions($userNit);
     $apiData['credit-accounts'] = $apiModel->getCreditAccountsOptions($userNit);
+    // print_r($apiData['credit-accounts']);
     $apiData['canceled-credit-accounts'] = $apiModel->getCreditCanceledAccountsOptions($userNit);
     $apiData['credit-accounts-to-peace'] = $apiModel->getCreditAccountsToPeace($userNit);
 
@@ -109,6 +110,10 @@ class Page_indexController extends Page_mainController
     $cert_option = $this->_getSanitizedParam('cert_option');
     $dataModel = new Page_Model_Data();
     $data = $dataModel->returnData($id, $cert_option);
+    /* echo "<pre>";
+    print_r($data);
+    echo "</pre>";
+    return; */
     if ($this->_getSanitizedParam('addressee')) {
       $data['Addressee'] = $this->_getSanitizedParam('addressee');
     } else {

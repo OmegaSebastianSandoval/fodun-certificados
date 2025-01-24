@@ -36,8 +36,8 @@
   <tr>
     <td class="">
       <p>
-        El(la) Asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>,
-        a fecha <?php echo $this->data['date-day'] ?> de <?php echo $this->data['date-month-in-letter'] ?> de <?php echo $this->data['date-year'] ?> contaba con:
+        El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>,
+        a fecha <?php echo $this->data['date-day'] ?> de <?php echo $this->data['date-month-in-letter'] ?> de <?php echo $this->data['date-year'] ?> presenta los siguientes saldos:
       </p>
       <br>
     </td>
@@ -59,14 +59,16 @@
           </td>
         </tr>
         <?php foreach ($this->data['saving-accounts'] as $saving): ?>
-          <tr>
-            <td>
-              <?php echo $saving->NombreProducto ?>
-            </td>
-            <td>
-              $<?php echo number_format($saving->SaldoDisponible, 0, ',', '.') ?>
-            </td>
-          </tr>
+          <?php if ($saving->SaldoDisponible > 0) { ?>
+            <tr>
+              <td>
+                <?php echo $saving->NombreProducto ?>
+              </td>
+              <td>
+                $<?php echo number_format($saving->SaldoDisponible, 0, ',', '.') ?>
+              </td>
+            </tr>
+          <?php } ?>
         <?php endforeach; ?>
       </table>
     </td>
@@ -101,20 +103,23 @@
           </td>
         </tr>
         <?php foreach ($this->data['credit-accounts'] as $credit): ?>
-          <tr>
-            <td>
-              <?php echo $credit->NombreProducto ?>
-            </td>
-            <td>
-              $<?php echo number_format($credit->SaldoCapital, 0, ',', '.') ?>
-            </td>
-            <td>
-              $<?php echo number_format($credit->Cuota, 0, ',', '.') ?>
-            </td>
-            <td>
-              <?php echo $credit->CuotasAtrasadas > 0 ? $credit->CuotasAtrasadas . ' cuota(s) atrasadas' : 'Al dia'; ?>
-            </td>
-          </tr>
+          <?php if ($credit->SaldoCapital > 0) { ?>
+
+            <tr>
+              <td>
+                <?php echo $credit->NombreProducto ?>
+              </td>
+              <td>
+                $<?php echo number_format($credit->SaldoCapital, 0, ',', '.') ?>
+              </td>
+              <td>
+                $<?php echo number_format($credit->Cuota, 0, ',', '.') ?>
+              </td>
+              <td>
+                <?php echo $credit->CuotasAtrasadas > 0 ? $credit->CuotasAtrasadas . ' cuota(s) atrasadas' : 'Al dia'; ?>
+              </td>
+            </tr>
+          <?php } ?>
         <?php endforeach; ?>
       </table>
     </td>
@@ -123,7 +128,7 @@
     <td class="">
       <p>
         <br><br>
-        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> de
+        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
         <?php echo $this->data['date-year'] ?>, con una validez de 30 días.
       </p>
     </td>
@@ -159,10 +164,10 @@
   </table>
 </footer>
 <!-- <?php
-echo '<pre>';
-print_r($this->data);
-echo '</pre>';
-?> -->
+      echo '<pre>';
+      print_r($this->data);
+      echo '</pre>';
+      ?> -->
 <style>
   * {
     font-family: Arial, Helvetica, sans-serif;

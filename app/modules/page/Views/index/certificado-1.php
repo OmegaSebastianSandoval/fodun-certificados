@@ -24,7 +24,7 @@
   <tr>
     <td class="my">
       <p>
-        Que el señor <?php echo $this->data['basic']->NombreCompleto ?> identificado con CC <?php echo $this->data['basic']->Cedula ?> se encuentra inscrito en el registro social de FODUN y posee el siguiente producto:
+        El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> identificado con CC <?php echo $this->data['basic']->Cedula ?> se encuentra inscrito en el registro social de FODUN y posee el siguiente producto:
       </p>
     </td>
   </tr>
@@ -59,26 +59,31 @@
   <img src="<?php echo IMAGE_PATH ?>footer-coop.jpg" alt="">
 </footer>
 <style>
-  *{
+  * {
     font-family: Arial, Helvetica, sans-serif;
   }
-  footer{
+
+  footer {
     margin-left: -60px;
     margin-right: -60px;
     position: fixed;
     bottom: -60px;
     left: 0;
   }
-  .titulo{
+
+  .titulo {
     font-size: 20px;
   }
-  .text-center{
+
+  .text-center {
     text-align: center;
   }
-  .bold{
+
+  .bold {
     font-weight: bold;
   }
-  .my{
+
+  .my {
     padding: 30px 0;
   }
 </style>

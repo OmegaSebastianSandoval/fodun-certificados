@@ -129,7 +129,9 @@ class Page_Model_Api
     } else {
       $dataResponse = array();
       foreach (json_decode($response) as $account) {
-        $dataResponse[] = $account->NombreProducto . ' - ' . $account->NumeroCredito . ' - ' . $account->CuentaCoopcentral;
+        if ($account->CuotasPorPagar > 0 && $account->SaldoCapital > 0) {
+          $dataResponse[] = $account->NombreProducto . ' - ' . $account->NumeroCredito . ' - ' . $account->CuentaCoopcentral;
+        }
       }
       return $dataResponse;
     }

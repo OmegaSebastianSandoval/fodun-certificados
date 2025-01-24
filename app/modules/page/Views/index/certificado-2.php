@@ -29,10 +29,10 @@
   <tr>
     <td class="my">
       <p>
-        El asociado, <?php echo $this->data['basic']->NombreCompleto ?> con cedula de ciudadanía <?php echo $this->data['basic']->Cedula ?>, a la fecha se
+      El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con cedula de ciudadanía <?php echo $this->data['basic']->Cedula ?>, a la fecha se
         encuentra registrado en nuestras bases de datos como asociado activo al FODUN. Con
         fecha de ingreso el día <?php echo $this->data['basic']->FechaIngresoLetra ?>.
-        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> de
+        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
         <?php echo $this->data['date-year'] ?>, con una validez de 30 días.
       </p>
     </td>

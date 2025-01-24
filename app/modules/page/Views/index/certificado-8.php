@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 $meses = array(
   '01' => 'enero',
   '02' => 'febrero',
@@ -14,7 +13,14 @@ $meses = array(
   '11' => 'noviembre',
   '12' => 'diciembre',
 );
+$nombreProducto = $this->data['canceled-credit-accounts']->NombreProducto;
 
+// Verificar si contiene "vehiculo" o "vehículo" (insensible a mayúsculas y minúsculas)
+if (stripos($nombreProducto, 'Vehículo') !== false || stripos($nombreProducto, 'Vehiculo') !== false) {
+  $adicional = ', dejando el vehículo libre de toda prenda y/o pignoración.';
+}else{
+  $adicional = '.';
+}
 ?>
 <div class="header">
   <div class="logo-container">
@@ -30,7 +36,7 @@ $meses = array(
   <tr>
     <td>
       <br>
-      <span class="title bold">REF: CERTIFICACIÓN PAGO <span style="text-transform: uppercase;"><?php echo $this->data['account']->NombreProducto ?></span></span>
+      <span class="title bold">REF: CERTIFICACIÓN PAGO <span style="text-transform: uppercase;"><?php echo $this->data['canceled-credit-accounts']->NombreProducto ?></span></span>
       <br>
       <br>
       <br>
@@ -59,9 +65,9 @@ $meses = array(
       <p>
         <br>
         <br>
-        Que el(la) Asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>,
+        Que el(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>,
         canceló en su totalidad el día <?php echo date('d', strtotime($this->data['canceled-credit-accounts']->FechaCancelacion)) ?> de <?php echo $meses[date('m', strtotime($this->data['canceled-credit-accounts']->FechaCancelacion))] ?> de <?php echo date('Y', strtotime($this->data['canceled-credit-accounts']->FechaCancelacion)) ?> el <?php echo $this->data['canceled-credit-accounts']->NombreProducto ?> #<?php echo $this->data['canceled-credit-accounts']->NumeroCredito ?> desembolsado el
-        <?php echo date('d/m/Y', strtotime($this->data['canceled-credit-accounts']->FechaDesembolso)) ?>, dejando el vehículo libre de toda prenda y/o pignoración.
+        <?php echo date('d/m/Y', strtotime($this->data['canceled-credit-accounts']->FechaDesembolso)) ?><?= $adicional?>
       </p>
       <br>
     </td>
@@ -70,7 +76,7 @@ $meses = array(
     <td class="">
       <p>
         <br>
-        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> de
+        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
         <?php echo $this->data['date-year'] ?>, con una validez de 30 días.
       </p>
     </td>

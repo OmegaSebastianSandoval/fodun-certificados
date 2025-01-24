@@ -25,6 +25,12 @@
           </div>
         </div>
       </div>
+      <?php 
+    /*   echo '<pre>';
+       print_r($this->tipos);
+      print_r($this->apiData);
+      echo '</pre>'; */
+      ?>
       <input type="hidden" name="csrf_token" value="<?php echo Session::getInstance()->get('csrf_token_user') ?>">
       <div class="col-12 text-center">
         <div class="row">
@@ -61,12 +67,14 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                <form action="/page/index/generar" method="post" class="row" target="_blank">
+                                <form action="/page/index/generar" method="post" class="row" target="_blank" onsubmit="return closeModals()">
                                   <input type="hidden" value="<?php echo $key ?>" name="id">
                                   <?php if ($tipo['optionsType'] == 'API') { ?>
                                     <div class="col-12">
+
                                       <select name="cert_option" id="cert_option" class="form-control">
                                         <?php foreach ($this->apiData[$tipo['optionApi']] as $optionKey => $option): ?>
+                                         
                                           <option value="<?php echo $optionKey ?>"><?php echo $option ?></option>
                                         <?php endforeach; ?>
                                       </select>
@@ -115,8 +123,17 @@ echo '</pre>';
       icon: 'error',
       title: 'Oops...',
       text: '<?php echo $_GET['message'] ?>',
+      confirmButtonColor: "#af1c30",
+      confirmButtonText: "Aceptar",
     }).then(() => {
-      window.location.href = '/page/index/certificados';
+      // window.location.href = '/page/index/certificados';
     })
   </script>
 <?php } ?>
+
+<script>
+  function closeModals() {
+    $('.modal').modal('hide');
+    return true;
+  }
+</script>

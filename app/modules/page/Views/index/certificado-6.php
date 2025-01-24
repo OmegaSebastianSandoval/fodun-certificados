@@ -47,11 +47,10 @@
       <p>
         <br>
         <br>
-        El(la) Asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>
-        cuenta con el crédito de rotatorio #9903254 desde el 17/12/2011 con un cupo
-        aprobado de $18.000.000, del cual cuenta con un saldo a capital de $ 16.523.729 a la
-        fecha, con próxima cuota mensual de $ 690.700 la cual debe cancelar antes de
-        05/09/2019.
+        El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>
+        cuenta con el <?php echo $this->data['account']->NombreProducto ?> #<?php echo $this->data['account']->NumeroCredito ?> desde el <?php echo date('d/m/Y', strtotime($this->data['account']->FechaDesembolso)) ?> con un cupo
+        aprobado de  $<?php echo number_format($this->data['account']->Monto, 0, ',', '.') ?>, del cual cuenta con un saldo a capital de $<?php echo number_format($this->data['account']->SaldoCapital, 0, ',', '.') ?> a la
+        fecha, con próxima cuota mensual de  $<?php echo number_format($this->data['account']->Cuota, 0, ',', '.') ?> la cual debe cancelar antes de <?php echo date('d/m/Y', strtotime($this->data['account']->FechaProximoPago)) ?>.
       </p>
       <br>
     </td>
@@ -60,7 +59,7 @@
     <td class="">
       <p>
         <br>
-        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> de
+        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
         <?php echo $this->data['date-year'] ?>, con una validez de 30 días.
       </p>
     </td>
