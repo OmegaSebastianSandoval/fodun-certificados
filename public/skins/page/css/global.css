@@ -181,7 +181,8 @@ p.login-par {
 
 header {
   width: 100%;
-  height: 60px;
+  background-color: var(--red);
+
 }
 
 header .header {

@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header container">
   <div class="left">
     <img src="/skins/page/images/logo-negativo.png" alt="" class="logo">
   </div>

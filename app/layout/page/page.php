@@ -47,7 +47,8 @@
 
   <!-- Main Js -->
   <script src="/skins/page/js/main.js?v=2"></script>
-
+  <!-- metacolor -->
+  <meta name="theme-color" content="#af1c30">
   <!-- Recaptcha -->
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <meta name="description" content="<?= $this->_data['meta_description']; ?>" />

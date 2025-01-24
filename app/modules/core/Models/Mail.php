@@ -31,7 +31,7 @@ class Core_Model_Mail
     $this->mail->Username = $informacion->info_pagina_username;
     $this->mail->Password = $informacion->info_pagina_password;
     $this->mail->setFrom($informacion->info_pagina_correo_remitente, $informacion->info_pagina_nombre_remitente); */
-    $this->mail = new PHPMailer;
+    /*     $this->mail = new PHPMailer;
     $this->mail->CharSet = 'UTF-8';
     $this->mail->isSMTP();
     $this->mail->SMTPDebug = 0;
@@ -41,6 +41,17 @@ class Core_Model_Mail
     $this->mail->SMTPAuth = true;
     $this->mail->Username = "pruebas@omegasolucionesweb.com";
     $this->mail->Password = "Admin.2008";
+    $this->mail->setFrom($informacion->info_pagina_correo_remitente, $informacion->info_pagina_nombre_remitente); */
+    $this->mail = new PHPMailer;
+    $this->mail->CharSet = 'UTF-8';
+    $this->mail->isSMTP();
+    $this->mail->SMTPDebug = 0;
+    $this->mail->SMTPSecure = "ssl";
+    $this->mail->Host = "smtp.gmail.com";
+    $this->mail->Port = 465;
+    $this->mail->SMTPAuth = true;
+    $this->mail->Username = "creditosfemac@gmail.com";
+    $this->mail->Password = "vrdu rqvr szvt uecd";
     $this->mail->setFrom($informacion->info_pagina_correo_remitente, $informacion->info_pagina_nombre_remitente);
   }
   /**

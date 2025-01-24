@@ -120,6 +120,13 @@ class Page_loginController extends Page_mainController
         'message' => 'Ha ocurrido un error al enviar el correo'
       ];
     }
+    // Resetea los intentos fallidos al iniciar sesión correctamente
+    $infoBloqueo = $bloqueosModel->getList("bloqueo_nit = '$nit'", "bloqueo_id DESC");
+    if (count($infoBloqueo) > 0) {
+      foreach ($infoBloqueo as $info) {
+        $bloqueosModel->deleteRegister($info->bloqueo_id);
+      }
+    }
 
     echo json_encode($response);
     return;
@@ -375,21 +382,21 @@ class Page_loginController extends Page_mainController
     // Devuelve el número de intentos
     return $intento;
   }
-    // Método para obtener el número de intentos fallidos de un usuario
-    public function getIntentosEmail($email)
-    {
-      $bloqueosModel = new Administracion_Model_DbTable_Bloqueos();
-  
-      // Obtiene el último registro de bloqueo del usuario
-      $infoBloqueo = $bloqueosModel->getList("bloqueo_usuario = '$email'", "bloqueo_id DESC")[0];
-  
-      // Incrementa el contador de intentos fallidos
-      $intento = $infoBloqueo->bloqueo_intentosfallidos ?? 0;
-      $intento = $intento + 1;
-  
-      // Devuelve el número de intentos
-      return $intento;
-    }
+  // Método para obtener el número de intentos fallidos de un usuario
+  public function getIntentosEmail($email)
+  {
+    $bloqueosModel = new Administracion_Model_DbTable_Bloqueos();
+
+    // Obtiene el último registro de bloqueo del usuario
+    $infoBloqueo = $bloqueosModel->getList("bloqueo_usuario = '$email'", "bloqueo_id DESC")[0];
+
+    // Incrementa el contador de intentos fallidos
+    $intento = $infoBloqueo->bloqueo_intentosfallidos ?? 0;
+    $intento = $intento + 1;
+
+    // Devuelve el número de intentos
+    return $intento;
+  }
 
   public function logOutAction()
   {
