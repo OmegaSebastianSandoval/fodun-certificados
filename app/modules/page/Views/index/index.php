@@ -8,7 +8,7 @@
         <div class="col-lg-9 col-md-10 col-12 d-flex justify-content-center align-items-center">
           <div class="row">
             <div class="col-12">
-              <img src="/skins/page/images/logo.jpg" alt="" class="logo">
+              <img src="/skins/page/images/logo.png" alt="" class="logo">
             </div>
             <div class="col-12">
               <h3 class="login-title">Bienvenidos</h3>

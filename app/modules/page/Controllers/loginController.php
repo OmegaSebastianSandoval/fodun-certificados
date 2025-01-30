@@ -88,6 +88,35 @@ class Page_loginController extends Page_mainController
 
 
     $email = $data->email;
+    $estado = $data->estado;
+    $fechaRetiro = $data->fechaRetiro;
+    if (!$email) {
+      $response = [
+        'status' => 'error',
+        'error' => 'Correo no encontrado',
+        'message' => 'Correo no encontrado',
+      ];
+      echo json_encode($response);
+      return;
+    }
+    if ($estado != 1) {
+      $response = [
+        'status' => 'error',
+        'error' => 'Usuario inactivo',
+        'message' => 'Usuario inactivo',
+      ];
+      echo json_encode($response);
+      return;
+    }
+    if ($fechaRetiro) {
+      $response = [
+        'status' => 'error',
+        'error' => 'Usuario retirado',
+        'message' => 'Usuario retirado',
+      ];
+      echo json_encode($response);
+      return;
+    }
     $nombreCompleto = $data->nombre;
     $otp = $this->generateOTP();
     $otpModel = new Administracion_Model_DbTable_Otpcodes();
@@ -266,7 +295,9 @@ class Page_loginController extends Page_mainController
         // Crear un nuevo objeto con solo email y nombre
         return (object)[
           'email' => $response[0]->Email,
-          'nombre' => $response[0]->NombreCompleto
+          'nombre' => $response[0]->NombreCompleto,
+          'estado' => $response[0]->Estado,
+          'fechaRetiro' => $response[0]->FechaRetiro,
         ];
       }
     } catch (Exception $e) {

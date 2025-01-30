@@ -1,6 +1,6 @@
 <div class="header">
   <div class="logo-container">
-    <img src="<?php echo IMAGE_PATH ?>fodun-logo.jpg" alt="" width="250" class="logo">
+    <img src="<?php echo IMAGE_PATH ?>Logo_Fodun.png" alt="" width="250" class="logo">
   </div>
 </div>
 <table>
@@ -37,7 +37,7 @@
     <td class="">
       <p>
         El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>,
-        a fecha <?php echo $this->data['date-day'] ?> de <?php echo $this->data['date-month-in-letter'] ?> de <?php echo $this->data['date-year'] ?> presenta los siguientes saldos:
+        a fecha <?php echo $this->data['date-day'] ?> de <?php echo $this->data['date-month-in-letter'] ?> de <?php echo $this->data['date-year'] ?> presenta los siguientes productos y saldos de ahorro:
       </p>
       <br>
     </td>

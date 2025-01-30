@@ -1,6 +1,6 @@
 <div class="header">
   <div class="logo-container">
-    <img src="<?php echo IMAGE_PATH ?>fodun-logo.jpg" alt="" width="250" class="logo">
+    <img src="<?php echo IMAGE_PATH ?>Logo_Fodun.png" alt="" width="250" class="logo">
   </div>
 </div>
 <table>
@@ -47,10 +47,8 @@
       <p>
         <br>
         <br>
-        El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>
-        cuenta con el <?php echo $this->data['account']->NombreProducto ?> #<?php echo $this->data['account']->NumeroCredito ?> desde el <?php echo date('d/m/Y', strtotime($this->data['account']->FechaDesembolso)) ?> con un cupo
-        aprobado de  $<?php echo number_format($this->data['account']->Monto, 0, ',', '.') ?>, del cual cuenta con un saldo a capital de $<?php echo number_format($this->data['account']->SaldoCapital, 0, ',', '.') ?> a la
-        fecha, con próxima cuota mensual de  $<?php echo number_format($this->data['account']->Cuota, 0, ',', '.') ?> la cual debe cancelar antes de <?php echo date('d/m/Y', strtotime($this->data['account']->FechaProximoPago)) ?>.
+        El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>, actualmente cuenta con la línea de <?php echo $this->data['account']->NombreProducto ?> #<?php echo $this->data['account']->NumeroCredito ?>, desde el <?php echo date('d/m/Y', strtotime($this->data['account']->FechaDesembolso)) ?> con un monto desembolsado de  $<?php echo number_format($this->data['account']->Monto, 0, ',', '.') ?>, el cual presenta un saldo de $<?php echo number_format($this->data['account']->SaldoCapital, 0, ',', '.') ?> a la
+        fecha, con cuota mensual de  $<?php echo number_format($this->data['account']->Cuota, 0, ',', '.') ?> la cual debe cancelar antes de <?php echo date('d/m/Y', strtotime($this->data['account']->FechaProximoPago)) ?>.
       </p>
       <br>
     </td>

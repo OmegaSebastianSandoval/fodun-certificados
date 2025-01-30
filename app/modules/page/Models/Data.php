@@ -22,23 +22,15 @@ class Page_Model_Data
     $userNit = Session::getInstance()->get('user')->Cedula;
     $json = $this->certJson;
     $json = $json[$nit];
-    // echo '<pre>';
-    //   print_r($json);
-    // echo '</pre>';
+    /* echo '<pre>';
+    print_r($json);
+    echo '</pre>'; */
     foreach ($json['required-data'] as $require) {
       switch ($require) {
         case 'date':
           setlocale(LC_TIME, 'es_ES.UTF-8');
 
-          /*  $data['date'] = date('d/m/Y');
-          $data['date-day'] = date('d');
-          $data['date-month'] = date('m');
-          $data['date-year'] = date('Y');
-          $data['date-day-in-letter'] = strftime('%A');
-          $data['date-month-in-letter'] = strftime('%B');
-          $data['date-year-in-letter'] = $this->numeroEnLetras(date('Y'));
-          $data['date-in-letter'] = strftime('%A, %d de %B de %Y');
-          $data['date-in-letter'] = $this->getFecha(); */
+
 
           // Fecha actual
           $fechaActual = new DateTime();
@@ -67,9 +59,7 @@ class Page_Model_Data
         case 'basic':
           $apiModel = new Page_Model_Api();
           $data['basic'] = $apiModel->getAsociado($userNit)[0];
-          /*   setlocale(LC_TIME, 'es_ES.UTF-8');
-          $timestamp = strtotime($data['basic']->FechaIngreso);
-          $data['basic']->FechaIngresoLetra = strftime('%e de %B de %Y', $timestamp); */
+
           // Configurar el idioma a español
           setlocale(LC_TIME, 'es_ES.UTF-8');
 
@@ -89,8 +79,8 @@ class Page_Model_Data
         case 'saving-account':
           $apiModel = new Page_Model_Api();
           if ($optionSelected >= 0) {
-            $account = $apiModel->getSavingAccounts($userNit)[$optionSelected];
-           
+            $account = $apiModel->getSavingAccounts($userNit, false)[$optionSelected];
+
             $data['account'] = $account;
             $data['saving-account'] = $apiModel->getSavingAccount($userNit, $account->CuentaAhorros, $account->CodigoAhorro) ? 'true' : 'false';
             if ($data['saving-account'] == 'false') {
@@ -104,7 +94,7 @@ class Page_Model_Data
           if ($optionSelected >= 0) {
             $account = $apiModel->getCreditAccounts($userNit)[$optionSelected];
             $data['account'] = $account;
-            $data['credit-account'] = $apiModel->getCreditAccount($userNit, $account->CuentaAhorros, $account->CodigoAhorro) ? 'true' : 'false';
+            $data['credit-account'] = $apiModel->getCreditAccount($userNit, $account->CuentaAhorros) ? 'true' : 'false';
             if ($data['credit-account'] == 'false') {
               $data['error'] = 'true';
               $data['error-message'] = 'No se encontró la cuenta de ahorros';
@@ -113,12 +103,29 @@ class Page_Model_Data
           break;
         case 'saving-accounts':
           $apiModel = new Page_Model_Api();
-          $account = $apiModel->getSavingAccounts($userNit);
+          $account = $apiModel->getSavingAccounts($userNit, true);
           $data['saving-accounts'] = $account;
           break;
         case 'credit-accounts':
           $apiModel = new Page_Model_Api();
           $data['credit-accounts'] = $apiModel->getCreditAccounts($userNit);
+          break;
+        case 'credit-accounts-peaces':
+          $apiModel = new Page_Model_Api();
+          $data['credit-accounts'] = $apiModel->getCreditAccounts($userNit);
+          if (is_countable($data['credit-accounts']) && count($data['credit-accounts']) > 0) {
+            $data['CuotasAtrasadas'] = array_sum(array_column($data['credit-accounts'], 'CuotasAtrasadas'))+1;
+            $data['DiasAtraso'] = array_sum(array_column($data['credit-accounts'], 'DiasAtraso'));
+            $data['ValorAtraso']  = array_sum(array_column($data['credit-accounts'], 'ValorAtraso'));
+            if (
+              $data['CuotasAtrasadas'] > 0 ||
+              $data['DiasAtraso'] > 0 ||
+              $data['ValorAtraso'] > 0
+            ) {
+              $data['error'] = 'true';
+              $data['error-message'] = 'Certificado no disponible, por favor comuníquese con la oficina de su respectiva regional.';
+            }
+          }
           break;
         case 'canceled-credit-account':
           $apiModel = new Page_Model_Api();

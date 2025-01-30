@@ -1,6 +1,6 @@
   <div class="header">
     <div class="logo-container">
-      <img src="<?php echo IMAGE_PATH ?>fodun-logo.jpg" alt="" width="250" class="logo">
+      <img src="<?php echo IMAGE_PATH ?>Logo_Fodun.png" alt="" width="250" class="logo">
     </div>
   </div>
   <table>
@@ -36,7 +36,7 @@
     <tr>
       <td class="">
         <p>
-          El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> de Morales con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?> posee en el fondo los siguientes productos y saldos de crédito.
+          El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>, a la fecha posee en el fondo los siguientes productos y saldos de crédito.
         </p>
         <br>
       </td>

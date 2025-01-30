@@ -112,8 +112,9 @@ class Page_indexController extends Page_mainController
     $data = $dataModel->returnData($id, $cert_option);
     /* echo "<pre>";
     print_r($data);
-    echo "</pre>";
+    echo "</pre>"; 
     return; */
+
     if ($this->_getSanitizedParam('addressee')) {
       $data['Addressee'] = $this->_getSanitizedParam('addressee');
     } else {

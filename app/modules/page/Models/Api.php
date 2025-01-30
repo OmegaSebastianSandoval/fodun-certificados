@@ -32,7 +32,7 @@ class Page_Model_Api
 
     curl_close($ch);
   }
-  public function getSavingAccounts($nit)
+  public function getSavingAccounts($nit, $all)
   {
     $url = $this->API_URL . '/api/portafolio/ahorro/' . $nit;
 
@@ -51,7 +51,27 @@ class Page_Model_Api
     if (curl_errno($ch)) {
       echo 'Error:' . curl_error($ch);
     } else {
-      return json_decode($response);
+
+      $dataResponse = array();
+      foreach (json_decode($response) as $account) {
+        if ($all) {
+          if ($account->NombreProducto == 'AHORRO A LA VISTA') {
+            $account->NombreProducto = 'AHORROS';
+          }
+          $dataResponse[] = $account;
+        } else {
+          if ($account->CodigoAhorro == 4) {
+
+            if ($account->NombreProducto == 'AHORRO A LA VISTA') {
+              $account->NombreProducto = 'AHORROS';
+            }
+
+            $dataResponse[] = $account;
+          }
+        }
+      }
+
+      return $dataResponse;
     }
 
     curl_close($ch);
@@ -101,7 +121,13 @@ class Page_Model_Api
     } else {
       $dataResponse = array();
       foreach (json_decode($response) as $account) {
-        $dataResponse[] = $account->NombreProducto . ' - ' . $account->CuentaAhorros . ' - ' . $account->CuentaCoopcentral;
+        if ($account->CodigoAhorro == 4) {
+          if ($account->NombreProducto == 'AHORRO A LA VISTA') {
+            $account->NombreProducto = 'AHORROS';
+          }
+
+          $dataResponse[] = $account->NombreProducto . ' - ' . $account->CuentaCoopcentral;
+        }
       }
       return $dataResponse;
     }

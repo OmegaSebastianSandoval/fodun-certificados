@@ -24,7 +24,7 @@
   <tr>
     <td class="my">
       <p>
-        El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> identificado con CC <?php echo $this->data['basic']->Cedula ?> se encuentra inscrito en el registro social de FODUN y posee el siguiente producto:
+      Que El(la) Señor(a) <?php echo $this->data['basic']->NombreCompleto ?> identificado con CC <?php echo $this->data['basic']->Cedula ?> se encuentra inscrito en el registro social de FODUN y posee el siguiente producto:
       </p>
     </td>
   </tr>
@@ -35,7 +35,7 @@
   </tr>
   <tr>
     <td>
-      Número de cuenta: <strong><?php echo $this->data['account']->CuentaAhorros ?></strong>
+      Número de cuenta: <strong><?php echo $this->data['account']->CuentaCoopcentral ?></strong>
     </td>
   </tr>
   <tr>

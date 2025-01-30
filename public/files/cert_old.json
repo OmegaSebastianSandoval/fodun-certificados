@@ -1,6 +1,6 @@
 {
   "1": {
-    "title": "Certificado cuenta de ahorro FODUN – Coopcentral",
+    "title": "Cuenta de Ahorros CoopCentral",
     "image": "cert-1.webp",
     "required-data": ["basic", "date", "saving-account"],
     "optionsBool": true,
@@ -79,10 +79,20 @@
     "isRetired": false,
     "isPeace": false
   },
+  "9": {
+    "title": "Paz y salvo",
+    "image": "cert-9.webp",
+    "required-data": ["basic", "date"],
+    "optionsBool": true,
+    "optionsBtn": "Generar",
+    "optionsType": "Addressee",
+    "isRetired": false,
+    "isPeace": true
+  },
   "10": {
-    "title": "Paz y salvo total obligaciones crediticias",
+    "title": "Paz y salvo total obligaciones",
     "image": "cert-10.webp",
-    "required-data": ["basic", "date", "credit-accounts-peaces"],
+    "required-data": ["basic", "date"],
     "optionsBool": true,
     "optionsBtn": "Generar",
     "optionsType": "Addressee",

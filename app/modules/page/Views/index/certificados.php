@@ -18,16 +18,20 @@
           </div>
           <div class="col-md-7">
             <p>
-              ¡Hola asociado! En esta sección, puedes descargar fácilmente tus certificados. Solo elige el tipo de certificado que necesita. Hemos creado este espacio para que accedas de manera rápida y sencilla a tu información, asegurando que siempre tengas lo que necesitas al alcance de tu mano.
-              <br>
-              ¡Gracias por ser parte de nuestra comunidad!
+              Estimado(a) Asociado(a),
+            </p>
+            <p>
+              Hemos creado este espacio para que acceda de manera rápida y sencilla a su información, asegurando que siempre tenga lo que necesita al alcance de su mano.
+            </p>
+            <p>
+              En este módulo podrá descargar fácilmente sus certificados. Solo elija el tipo de certificado que necesita.
             </p>
           </div>
         </div>
       </div>
-      <?php 
-    /*   echo '<pre>';
-       print_r($this->tipos);
+      <?php
+     /*  echo '<pre>';
+      print_r($this->tipos);
       print_r($this->apiData);
       echo '</pre>'; */
       ?>
@@ -74,7 +78,7 @@
 
                                       <select name="cert_option" id="cert_option" class="form-control">
                                         <?php foreach ($this->apiData[$tipo['optionApi']] as $optionKey => $option): ?>
-                                         
+
                                           <option value="<?php echo $optionKey ?>"><?php echo $option ?></option>
                                         <?php endforeach; ?>
                                       </select>
@@ -113,10 +117,10 @@
   </div>
 </div>
 <!-- <?php
-echo '<pre>';
-print_r($this->apiData['credit-accounts-to-peace']);
-echo '</pre>';
-?> -->
+      echo '<pre>';
+      print_r($this->apiData['credit-accounts-to-peace']);
+      echo '</pre>';
+      ?> -->
 <?php if ($_GET['error'] == 'true') { ?>
   <script>
     Swal.fire({

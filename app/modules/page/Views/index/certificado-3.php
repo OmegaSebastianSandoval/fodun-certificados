@@ -1,6 +1,6 @@
 <div class="header">
   <div class="logo-container">
-    <img src="<?php echo IMAGE_PATH ?>fodun-logo.jpg" alt="" width="250" class="logo">
+    <img src="<?php echo IMAGE_PATH ?>Logo_Fodun.png" alt="" width="250" class="logo">
   </div>
 </div>
 <table>

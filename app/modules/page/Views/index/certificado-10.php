@@ -1,6 +1,6 @@
 <div class="header">
   <div class="logo-container">
-    <img src="<?php echo IMAGE_PATH ?>fodun-logo.jpg" alt="" width="250" class="logo">
+    <img src="<?php echo IMAGE_PATH ?>Logo_Fodun.png" alt="" width="250" class="logo">
   </div>
 </div>
 <table>
@@ -50,9 +50,60 @@
       <p>
         <br><br><br>
         Que el(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>,
-        se encuentra al día con todas sus obligaciones con el FONDO.
-      </p>
-      <br>
+        <?php
+        if (
+          $this->data['CuotasAtrasadas'] == 0 ||
+          $this->data['DiasAtraso'] == 0 ||
+          $this->data['ValorAtraso'] == 0
+        ) { ?>
+
+          se encuentra al día con todas sus obligaciones crediticias con el FONDO.
+        <?php } else { ?>
+          se encuentra al día con todas sus obligaciones crediticias con el FONDO, excepto por:
+          <br>
+          <br>
+      <table class="border-collapsed" style="width: 100%;">
+        <tr>
+          <td class="titulo-tabla">
+            Crédito
+          </td>
+          <td class="titulo-tabla">
+            Cuotas Atrasadas
+          </td>
+          <td class="titulo-tabla">
+            Días de Atraso
+          </td>
+          <td class="titulo-tabla">
+            Valor Atraso
+          </td>
+        </tr>
+
+        <?php foreach ($this->data['credit-accounts'] as $credit): ?>
+          <?php if ($credit->CuotasAtrasadas > 0 || $credit->DiasAtraso > 0 || $credit->ValorAtraso > 0) { ?>
+
+            <tr>
+              <td>
+                <?php echo $credit->NombreProducto ?>
+              </td>
+              <td>
+                $<?php echo $credit->CuotasAtrasadas ?>
+              </td>
+              <td>
+                $<?php echo $credit->DiasAtraso ?>
+              </td>
+              <td>
+                <?php echo $credit->ValorAtraso ?>
+              </td>
+
+            </tr>
+          <?php } ?>
+
+        <?php endforeach; ?>
+      </table>
+    <?php } ?>
+
+    </p>
+    <br>
     </td>
   </tr>
   <tr>
