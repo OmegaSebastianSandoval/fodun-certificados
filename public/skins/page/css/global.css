@@ -1,4 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ */
+/* Alegreya Sans SC - Black */
+
+
+/* Alegreya Sans - Thin */
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-Thin.otf') format('opentype');
+  font-weight: 100;
+  /* Thin */
+  font-style: normal;
+}
+
+/* Alegreya Sans - Thin Italic */
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-ThinItalic.otf') format('opentype');
+  font-weight: 100;
+  /* Thin */
+  font-style: italic;
+}
+
+/* Alegreya Sans - Light */
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-Light.otf') format('opentype');
+  font-weight: 300;
+  /* Light */
+  font-style: normal;
+}
+
+/* Alegreya Sans - Light Italic */
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  /* Light */
+  font-style: italic;
+}
+
+/* Alegreya Sans - Medium */
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-Medium.otf') format('opentype');
+  font-weight: 500;
+  /* Medium */
+  font-style: normal;
+}
+
+/* Alegreya Sans - Medium Italic */
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  /* Medium */
+  font-style: italic;
+}
+
+/* Alegreya Sans - Regular */
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/assets/fonts/AlegreyaSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  /* Regular */
+  font-style: normal;
+}
 
 :root {
   --red: #af1c30;
@@ -13,12 +79,15 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Alegreya Sans', sans-serif;
   position: relative;
 }
-html, body {
+
+html,
+body {
   height: 100dvh;
   overflow: hidden;
 }
@@ -28,10 +97,12 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100dvh;
 }
+
 img {
   max-width: 100%;
 }
-.contenedor-general{
+
+.contenedor-general {
   height: calc(100dvh - 120px);
 }
 
@@ -48,7 +119,8 @@ footer {
   font-weight: 300;
   height: 60px;
 }
-footer p{
+
+footer p {
   margin: 0;
 }
 
@@ -72,10 +144,11 @@ footer p{
 .bx-general {
   height: 100%;
 }
- .bx-general > .row {
+
+.bx-general>.row {
   overflow: hidden;
   min-height: 100%;
-} 
+}
 
 .login-bg {
   position: relative;
@@ -264,6 +337,7 @@ header .header .logo {
   z-index: 1;
   border-radius: 20px;
 }
+
 .certificados-bx .image-bx::before {
   content: "";
   position: absolute;
@@ -274,7 +348,8 @@ header .header .logo {
   background-color: #4e0b1494;
   z-index: 2;
 }
-.certificados-bx .image-bx > img{
+
+.certificados-bx .image-bx>img {
   position: absolute;
   object-fit: cover;
   object-position: center;
@@ -285,7 +360,7 @@ header .header .logo {
   transition: 300ms ease-in-out;
 }
 
-.certificados-bx .image-bx:hover > img {
+.certificados-bx .image-bx:hover>img {
   transform: scale(1.1);
   transition: 300ms ease-in-out;
 }

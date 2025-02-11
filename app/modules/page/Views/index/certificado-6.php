@@ -6,12 +6,12 @@
 <table>
   <tr>
     <td class="text-right">
-      Bogotá, <?php echo $this->data['date-in-letter'] ?>
+      <!--Bogotá,--> <?php echo $this->data['date-in-letter'] ?>
     </td>
   </tr>
   <tr>
     <td class="my">
-      Señores; <br>
+      Señores: <br>
       <?php echo $this->data['Addressee'] ?>
     </td>
   </tr>
@@ -29,7 +29,7 @@
       <div class="titulo text-center bold">
         EL FONDO DE EMPLEADOS DOCENTES DE LA UNIVERSIDAD NACIONAL DE COLOMBIA
         <br>
-        - FODUN -
+        FODUN
         <br>
         NIT: 800.112.808-7
       </div>
@@ -47,8 +47,8 @@
       <p>
         <br>
         <br>
-        El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>, actualmente cuenta con la línea de <?php echo $this->data['account']->NombreProducto ?> #<?php echo $this->data['account']->NumeroCredito ?>, desde el <?php echo date('d/m/Y', strtotime($this->data['account']->FechaDesembolso)) ?> con un monto desembolsado de  $<?php echo number_format($this->data['account']->Monto, 0, ',', '.') ?>, el cual presenta un saldo de $<?php echo number_format($this->data['account']->SaldoCapital, 0, ',', '.') ?> a la
-        fecha, con cuota mensual de  $<?php echo number_format($this->data['account']->Cuota, 0, ',', '.') ?> la cual debe cancelar antes de <?php echo date('d/m/Y', strtotime($this->data['account']->FechaProximoPago)) ?>.
+        El(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>, actualmente cuenta con la línea de <?php echo $this->data['account']->NombreProducto ?> #<?php echo $this->data['account']->NumeroCredito ?>, desde el <?php echo date('d/m/Y', strtotime($this->data['account']->FechaDesembolso)) ?> con un monto desembolsado de $<?php echo number_format($this->data['account']->Monto, 0, ',', '.') ?>, el cual presenta un saldo de $<?php echo number_format($this->data['account']->SaldoCapital, 0, ',', '.') ?> a la
+        fecha, con cuota mensual de $<?php echo number_format($this->data['account']->Cuota, 0, ',', '.') ?> la cual debe cancelar antes de <?php echo date('d/m/Y', strtotime($this->data['account']->FechaProximoPago)) ?>.
       </p>
       <br>
     </td>
@@ -57,7 +57,7 @@
     <td class="">
       <p>
         <br>
-        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
+        Este certificado se expide a solicitud del (la) interesado(a) a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
         <?php echo $this->data['date-year'] ?>, con una validez de 30 días.
       </p>
     </td>
@@ -70,11 +70,13 @@
 
     </td>
   </tr>
+  <br>
+  <br>
   <tr>
     <td class="my bold">
-    <br>
-    <br>
-      DEPARTAMENTO CARTERA – FODUN -
+      <br>
+      <br>
+      DEPARTAMENTO CARTERA FODUN
     </td>
   </tr>
 </table>

@@ -118,14 +118,36 @@ class Page_indexController extends Page_mainController
     if ($this->_getSanitizedParam('addressee')) {
       $data['Addressee'] = $this->_getSanitizedParam('addressee');
     } else {
-      $data['Addressee'] = 'a quien corresponda';
+      $data['Addressee'] = 'A quien corresponda';
     }
     if ($data['error'] == 'true') {
       header('Location: /page/index/certificados?error=true&message=' . $data['error-message']);
       exit;
     }
     $this->_view->data = $data;
-    $mpdf = new \Mpdf\Mpdf(['default_font' => 'Arial', 'tempDir' => ROOT . '..\vendor\mpdf\mpdf\tmp']);
+
+    $defaultConfig = (new \Mpdf\Config\ConfigVariables())->getDefaults();
+    $fontDirs = $defaultConfig['fontDir'];
+
+    $defaultFontConfig = (new \Mpdf\Config\FontVariables())->getDefaults();
+    $fontData = $defaultFontConfig['fontdata'];
+
+
+
+    $mpdf = new \Mpdf\Mpdf([
+      // 'default_font' => 'Arial',
+      'tempDir' => ROOT . '..\vendor\mpdf\mpdf\tmp',
+      'fontDir' => array_merge($fontDirs, [
+        __DIR__ . '/custom/font/directory',
+      ]),
+      'fontdata' => $fontData + [ // lowercase letters only in font key
+        'frutiger' => [
+          'R' => 'Frutiger-Normal.ttf',
+          'I' => 'FrutigerObl-Normal.ttf',
+        ]
+      ],
+      'default_font' => 'frutiger'
+    ]);
     $content = $this->_view->getRoutPHP('modules/page/Views/index/certificado-' . $id . '.php');
     $mpdf->title = 'Certificado ' . $title;
     // Cuales son los margenes de la hoja?: array(left, top, right, bottom)

@@ -3,6 +3,9 @@
     <img src="<?php echo IMAGE_PATH ?>Logo_Fodun.png" alt="" width="250" class="logo">
   </div>
 </div>
+<br>
+<br>
+<br>
 <table>
   <tr>
     <td class="my text-center">
@@ -12,7 +15,7 @@
       </div>
     </td>
   </tr>
-<!--   <tr>
+  <!--   <tr>
     <td class="my">
       Profesor(a); <br>
       <?php echo $this->data['basic']->NombreCompleto ?><br>
@@ -21,9 +24,9 @@
   </tr> -->
   <tr>
     <td class="my">
-      Señores; <br>
+      Señores: <br>
       <?php echo $this->data['Addressee'] ?><br>
-      Bogotá
+      <!-- Bogotá -->
     </td>
   </tr>
   <tr>
@@ -58,6 +61,8 @@
   </tr>
   <tr>
     <td>
+      <br>
+      <br>
       <br>
       Cordialmente,
     </td>

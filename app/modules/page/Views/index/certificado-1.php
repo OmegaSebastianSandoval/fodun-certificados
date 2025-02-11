@@ -4,7 +4,7 @@
 <table>
   <tr>
     <td class="my">
-      <span>Bogotá, D.C, <?php echo $this->data['date-in-letter'] ?></span>
+      <span><!--Bogotá,--> D.C, <?php echo $this->data['date-in-letter'] ?></span>
     </td>
   </tr>
   <tr>
@@ -24,7 +24,7 @@
   <tr>
     <td class="my">
       <p>
-      Que El(la) Señor(a) <?php echo $this->data['basic']->NombreCompleto ?> identificado con CC <?php echo $this->data['basic']->Cedula ?> se encuentra inscrito en el registro social de FODUN y posee el siguiente producto:
+        Que el(la) Señor(a) <?php echo $this->data['basic']->NombreCompleto ?> identificado con CC <?php echo $this->data['basic']->Cedula ?> se encuentra inscrito en el registro social de FODUN y posee el siguiente producto:
       </p>
     </td>
   </tr>

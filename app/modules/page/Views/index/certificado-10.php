@@ -14,9 +14,9 @@
   </tr>
   <tr>
     <td class="my">
-      Señores; <br>
+      Señores: <br>
       <?php echo $this->data['Addressee'] ?><br>
-      Bogotá
+      <!-- Bogotá -->
     </td>
   </tr>
   <tr>
@@ -32,7 +32,7 @@
       <div class="titulo text-center bold">
         EL FONDO DE EMPLEADOS DOCENTES DE LA UNIVERSIDAD NACIONAL DE COLOMBIA
         <br>
-        - FODUN -
+        FODUN
         <br>
         NIT: 800.112.808-7
       </div>
@@ -110,7 +110,7 @@
     <td class="">
       <p>
         <br>
-        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
+        Este certificado se expide a solicitud del (la) interesado(a) a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
         <?php echo $this->data['date-year'] ?>, con una validez de 30 días.
       </p>
     </td>
@@ -121,10 +121,12 @@
       Cordialmente,
     </td>
   </tr>
+  <br>
+  <br>
   <tr>
     <td class="my">
       <br><br><br>
-      DEPARTAMENTO CARTERA – FODUN –
+      DEPARTAMENTO CARTERA FODUN
     </td>
   </tr>
 </table>

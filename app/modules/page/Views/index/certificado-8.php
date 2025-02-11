@@ -18,7 +18,7 @@ $nombreProducto = $this->data['canceled-credit-accounts']->NombreProducto;
 // Verificar si contiene "vehiculo" o "vehículo" (insensible a mayúsculas y minúsculas)
 if (stripos($nombreProducto, 'Vehículo') !== false || stripos($nombreProducto, 'Vehiculo') !== false) {
   $adicional = ', dejando el vehículo libre de toda prenda y/o pignoración.';
-}else{
+} else {
   $adicional = '.';
 }
 ?>
@@ -30,7 +30,7 @@ if (stripos($nombreProducto, 'Vehículo') !== false || stripos($nombreProducto, 
 <table>
   <tr>
     <td class="text-right">
-      Bogotá, <?php echo $this->data['date-in-letter'] ?>
+      <!-- Bogotá,--><?php echo $this->data['date-in-letter'] ?>
     </td>
   </tr>
   <tr>
@@ -47,7 +47,7 @@ if (stripos($nombreProducto, 'Vehículo') !== false || stripos($nombreProducto, 
       <div class="titulo text-center bold">
         EL FONDO DE EMPLEADOS DOCENTES DE LA UNIVERSIDAD NACIONAL DE COLOMBIA
         <br>
-        - FODUN -
+        FODUN
         <br>
         NIT: 800.112.808-7
       </div>
@@ -67,7 +67,7 @@ if (stripos($nombreProducto, 'Vehículo') !== false || stripos($nombreProducto, 
         <br>
         Que el(la) asociado(a) <?php echo $this->data['basic']->NombreCompleto ?> con Cédula de Ciudadanía <?php echo $this->data['basic']->Cedula ?>,
         canceló en su totalidad el día <?php echo date('d', strtotime($this->data['canceled-credit-accounts']->FechaCancelacion)) ?> de <?php echo $meses[date('m', strtotime($this->data['canceled-credit-accounts']->FechaCancelacion))] ?> de <?php echo date('Y', strtotime($this->data['canceled-credit-accounts']->FechaCancelacion)) ?> el <?php echo $this->data['canceled-credit-accounts']->NombreProducto ?> #<?php echo $this->data['canceled-credit-accounts']->NumeroCredito ?> desembolsado el
-        <?php echo date('d/m/Y', strtotime($this->data['canceled-credit-accounts']->FechaDesembolso)) ?><?= $adicional?>
+        <?php echo date('d/m/Y', strtotime($this->data['canceled-credit-accounts']->FechaDesembolso)) ?><?= $adicional ?>
       </p>
       <br>
     </td>
@@ -76,7 +76,7 @@ if (stripos($nombreProducto, 'Vehículo') !== false || stripos($nombreProducto, 
     <td class="">
       <p>
         <br>
-        Este certificado se expide a solicitud del interesado a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
+        Este certificado se expide a solicitud del (la) interesado(a) a los <?php echo $this->data['date-day'] ?> días del mes de <?php echo $this->data['date-month-in-letter'] ?> del
         <?php echo $this->data['date-year'] ?>, con una validez de 30 días.
       </p>
     </td>
@@ -93,7 +93,7 @@ if (stripos($nombreProducto, 'Vehículo') !== false || stripos($nombreProducto, 
     <td class="my bold">
       <br>
       <br>
-      DEPARTAMENTO CARTERA – FODUN -
+      DEPARTAMENTO CARTERA FODUN
     </td>
   </tr>
 </table>
